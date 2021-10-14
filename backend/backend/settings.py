@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -66,13 +66,9 @@ SITE_ID = 1
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'twitch': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
         'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': ''
+            'client_id': os.environ.get("E1337_TWITCH_CLIENT_ID"),
+            'secret': os.environ.get("E1337_TWITCH_SECRET"),
         }
     }
 }
