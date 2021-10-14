@@ -42,13 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
     # CORS
     'corsheaders',
 
     # Django REST framework 
-    'rest_framework'
-    'rest_framework.authtoken',
+    'rest_framework',
     
     # 1337 application 
     'e1337.apps.E1337Config',
