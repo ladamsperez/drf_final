@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8081',
+    'http://localhost:8000',
 )
 
 # Application definition
@@ -51,8 +51,6 @@ INSTALLED_APPS = [
     # 1337 application 
     'e1337.apps.E1337Config',
 
-    #app
-    'e1337'
 ]
 
 MIDDLEWARE = [
