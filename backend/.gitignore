@@ -125,7 +125,10 @@ venv.bak/
 pythonenv*
 .zsrc_profile
 
-
+#certs
+cert.pem
+.pem
+key.pem
 
 # mkdocs documentation
 /site

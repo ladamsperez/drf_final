@@ -33,6 +33,6 @@ class TwitchConnect(SocialLoginView):
 def twitch_callback(request):
     params = urllib.parse.urlencode(request.GET)
     print(params)
-    return redirect(f'https://localhost:3000/twitch/{params}')
+    return redirect(f'https://localhost:3000/twitch/{params}/')
     # using jsonresponse as a placeholder until frontend params are finished
     # return JsonResponse(params, safe=False)
