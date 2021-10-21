@@ -27,12 +27,12 @@ class TwitchConnect(SocialLoginView):
 
     @property
     def callback_url(self):
-        return self.request.build_absolute_uri(reverse('twitch_callback'))
+        return self.request.build_absolute_uri('twitch_callback')
 
 
 def twitch_callback(request):
     params = urllib.parse.urlencode(request.GET)
     print(params)
-    return redirect(f'https://localhost:3000/twitch/{params}/')
+    return redirect('http://localhost')
     # using jsonresponse as a placeholder until frontend params are finished
     # return JsonResponse(params, safe=False)
