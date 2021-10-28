@@ -1,9 +1,15 @@
+import debug_toolbar
+
 from django.contrib import admin
 from django.urls import path, include
 from .views import TwitchConnect, twitch_callback
 from allauth.socialaccount.providers.twitch import views as twitch_views
 
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
 urlpatterns = [
+    path('__debug__/', include(debug_toolbar.urls)),
     path('admin/', admin.site.urls),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
