@@ -27,10 +27,12 @@ class TwitchConnect(SocialLoginView):
 
     @property
     def callback_url(self):
+        breakpoint()
         return self.request.build_absolute_uri(reverse('twitch_callback'))
 
 
 def twitch_callback(request):
+    breakpoint()
     url = 'http://localhost:3000'
     params = urllib.parse.urlencode(request.GET)
     print(params)

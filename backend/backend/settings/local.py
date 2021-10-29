@@ -7,6 +7,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'e1337ist.herokuapp.com',
 ]
 
 INSTALLED_APPS += [
