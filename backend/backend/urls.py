@@ -5,8 +5,7 @@ from django.urls import path, include
 from .views import TwitchConnect, twitch_callback
 from allauth.socialaccount.providers.twitch import views as twitch_views
 
-def trigger_error(request):
-    division_by_zero = 1 / 0
+
 
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
