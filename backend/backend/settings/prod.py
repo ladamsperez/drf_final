@@ -4,19 +4,21 @@ from .base import *
 from django.conf import settings
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'e1337ist',
-    'localhost',
+    'http://localhost:3000',
     'https://e1337ist.herokuapp.com'
 ]
 
 CORS_ALLOWED_ORIGINS = [
     # add frontend website here
-    'https://1337logs.netlify.app',
-    'https://1337logs.com',
-    'localhost',
+    'http://localhost:3000',
+    'http://localhost:3000/twitch/connect',
+    'http://localhost:8000',
+    'https://e1337ist.herokuapp.com',
+    'https://e1337ist.herokuapp.com/twitch/connect',
+
 ]
 
 DATABASES = {
@@ -30,19 +32,9 @@ DATABASES = {
     }
 }
 
-# STATIC_URL = '/static/'
-
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-
-# # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-# # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # heroku settings
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
 django_heroku.settings(locals())
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

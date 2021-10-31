@@ -6,10 +6,9 @@ from .views import TwitchConnect, twitch_callback
 from allauth.socialaccount.providers.twitch import views as twitch_views
 
 
-
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
-    path('admin/', admin.site.urls),
+    path('nimda/', admin.site.urls),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
     path('twitch/connect/', TwitchConnect.as_view(), name='twitch_connect'),
