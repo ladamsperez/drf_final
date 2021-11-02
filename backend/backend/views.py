@@ -34,7 +34,7 @@ class TwitchConnect(SocialLoginView):
 
 
 def twitch_callback(request):
-    url = 'http://localhost:3000'
+    url = 'www.1337link.com'
     params = urllib.parse.urlencode(request.GET)
     print(params)
     return redirect(f'{url}/twitch/{params}')
