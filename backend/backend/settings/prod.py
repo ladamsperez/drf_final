@@ -17,7 +17,7 @@ CORS_ALLOWED_ORIGINS = [
     'www.1337link.com'
     '1337link.netlify.app'
     'http://localhost:3000',
-    '1337link.com'
+    'https://1337link.com'
     'http://localhost:3000/twitch/connect',
     'http://localhost:8000',
     'https://e1337ist.herokuapp.com',
