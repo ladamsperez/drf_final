@@ -22,8 +22,11 @@ from django.shortcuts import redirect
 """
 
 class TwitchConnect(SocialLoginView):
+    authentication_classes = []
     client_class = OAuth2Client
     adapter_class = TwitchOAuth2Adapter
+    callback_url = "https://e1337ist.herokuapp.com/auth/login/callback/"
+
 
     @property
     def callback_url(self):
@@ -31,8 +34,9 @@ class TwitchConnect(SocialLoginView):
 
 
 def twitch_callback(request):
+    url = 'www.1337link.com'
     params = urllib.parse.urlencode(request.GET)
     print(params)
-    return redirect(f'https://localhost:3000/twitch/{params}/')
+    return redirect(f'{url}/twitch/{params}')
     # using jsonresponse as a placeholder until frontend params are finished
     # return JsonResponse(params, safe=False)
