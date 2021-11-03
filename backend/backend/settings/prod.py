@@ -4,24 +4,16 @@ from .base import *
 from django.conf import settings
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'http://localhost:3000',
     'https://e1337ist.herokuapp.com',
-    '1337link.com'
+
 ]
 
 CORS_ALLOWED_ORIGINS = [
     # add frontend website here
-    'www.1337link.com'
-    '1337link.netlify.app'
-    'http://localhost:3000',
-    'https://1337link.com'
-    'http://localhost:3000/twitch/connect',
-    'http://localhost:8000',
-    'https://e1337ist.herokuapp.com',
-    'https://e1337ist.herokuapp.com/twitch/connect',
+    'https://1337link.netlify.app'
 
 ]
 
